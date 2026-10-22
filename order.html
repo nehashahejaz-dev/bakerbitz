@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakerz Bite · Order Now</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+            background: #2b2018;
+            background-image:
+                radial-gradient(circle at 15% 15%, rgba(228, 179, 60, 0.10) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(212, 148, 42, 0.08) 0%, transparent 45%);
+            color: #f0e4d2;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* TOP NAV */
+        .top-nav {
+            background: rgba(45, 33, 24, 0.95);
+            border-bottom: 2px solid rgba(228, 179, 60, 0.35);
+            padding: 16px 0;
+            margin-bottom: 50px;
+        }
+
+        .logo-icon {
+            width: 52px; height: 52px;
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(145deg, #f7d774, #d4942a);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .logo-icon i { font-size: 24px; color: #3b2410; }
+
+        .logo-text h2 {
+            color: #f7d774;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border-radius: 50px;
+            background: transparent;
+            border: 2px solid rgba(228, 179, 60, 0.5);
+            color: #f5e6c8;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .btn-back:hover {
+            background: #e8b84a;
+            color: #2b1a06;
+            border-color: #e8b84a;
+        }
+
+        /* HEADER */
+        .order-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .order-header h1 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #f7d774;
+            letter-spacing: -1px;
+            margin: 0 0 12px 0;
+        }
+
+        .order-header h1 em {
+            font-style: italic;
+            font-weight: 400;
+            color: #e8b84a;
+        }
+
+        .order-header p {
+            color: #b8a487;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* ORDER CARD */
+        .order-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(35, 23, 15, 0.6);
+            border: 1px solid rgba(228, 179, 60, 0.25);
+            border-radius: 22px;
+            padding: 40px 34px;
+            box-shadow: 0 25px 50px -25px rgba(0, 0, 0, 0.8);
+        }
+
+        .order-card h2 {
+            font-family: Georgia, serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #f7d774;
+            margin: 0 0 24px 0;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(228, 179, 60, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .order-card h2 i { color: #e8b84a; font-size: 18px; }
+
+    
+        .field { margin-bottom: 20px; }
+
+        .field label {
+            display: block;
+            color: #b8a487;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(20, 13, 9, 0.8);
+            border: 1px solid rgba(228, 179, 60, 0.25);
+            border-radius: 12px;
+            color: #f5e6c8;
+            font-size: 14.5px;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.25s ease;
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: rgba(228, 179, 60, 0.8);
+            background: rgba(20, 13, 9, 1);
+            box-shadow: 0 0 0 3px rgba(228, 179, 60, 0.12);
+        }
+
+        .field input::placeholder,
+        .field textarea::placeholder { color: #6b5c4a; }
+
+        .field textarea { resize: vertical; min-height: 80px; }
+
+       
+        .field input.error,
+        .field select.error,
+        .field textarea.error {
+            border-color: rgba(255, 107, 107, 0.7);
+            background: rgba(40, 18, 18, 0.5);
+            box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+        }
+
+        .field-error {
+            display: none;
+            color: #ff6b6b;
+            font-size: 12.5px;
+            margin-top: 6px;
+            padding-left: 4px;
+            letter-spacing: 0.2px;
+            font-weight: 500;
+        }
+
+        .field-error::before {
+            content: '\f06a';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-right: 6px;
+            font-size: 11px;
+        }
+
+       
+        .field-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+   
+        .order-submit {
+            width: 100%;
+            margin-top: 10px;
+            padding: 16px;
+            background: linear-gradient(135deg, #f7d774, #e8b84a);
+            color: #2b1a06;
+            border: none;
+            border-radius: 12px;
+            font-size: 14.5px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 35px -10px rgba(232, 184, 74, 0.7);
+        }
+
+        .order-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 45px -10px rgba(232, 184, 74, 0.9);
+        }
+
+        /* Success */
+        .success-msg {
+            display: none;
+            text-align: center;
+            padding: 30px 10px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .success-msg.show { display: block; }
+
+        .success-msg i {
+            font-size: 56px;
+            color: #e8b84a;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .success-msg h3 {
+            font-family: Georgia, serif;
+            color: #f7d774;
+            font-size: 24px;
+            margin: 0 0 8px 0;
+        }
+
+        .success-msg p {
+            color: #b8a487;
+            font-size: 14.5px;
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 575.98px) {
+            .order-header h1 { font-size: 32px; }
+            .order-card { padding: 30px 22px; }
+            .field-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <a href="index.html" class="d-flex align-items-center gap-3" style="text-decoration:none;">
+                    <div class="logo-icon"><i class="fas fa-cake-candles"></i></div>
+                    <div class="logo-text"><h2>Bakerz Bite</h2></div>
+                </a>
+                <a href="project.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HEADER -->
+    <section class="order-header">
+        <h1>Place your <em>order</em></h1>
+        <p>Fill the form below and we'll bake it fresh for you</p>
+    </section>
+
+    <!-- ORDER FORM -->
+    <div class="order-card" id="orderCard">
+        <h2><i class="fas fa-clipboard-list"></i> Order Details</h2>
+
+        <form id="reg_form" novalidate>
+            <!-- Name -->
+            <div class="field">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your name">
+                <small class="field-error" id="er_name">Please enter a valid name (letters only)</small>
+            </div>
+
+            <!-- Phone + Email -->
+            <div class="field-row">
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="+92 300 1234567">
+                    <small class="field-error" id="er_phone">Enter a valid phone (10-13 digits)</small>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="you@example.com">
+                    <small class="field-error" id="er_email">Enter a valid email address</small>
+                </div>
+            </div>
+
+            <!-- Product -->
+            <div class="field">
+                <label for="product">Select Product</label>
+                <select id="product">
+                    <option value="">-- Choose an item --</option>
+                    <option value="Chocolate Fudge Cake">Chocolate Fudge Cake</option>
+                    <option value="Butter Croissants">Butter Croissants</option>
+                    <option value="Strawberry Cupcakes">Strawberry Cupcakes</option>
+                    <option value="Sourdough Bread">Sourdough Bread</option>
+                    <option value="Double Chocolate Donut">Double Chocolate Donut</option>
+                    <option value="Red Velvet Cake Slice">Red Velvet Cake Slice</option>
+                    <option value="Blueberry Muffin">Blueberry Muffin</option>
+                    <option value="Vanilla Macarons">Vanilla Macarons</option>
+                    <option value="Garlic Breadsticks">Garlic Breadsticks</option>
+                    <option value="Mango Cheesecake">Mango Cheesecake</option>
+                    <option value="Chocolate Chip Cookies">Chocolate Chip Cookies</option>
+                    <option value="Apple Cinnamon Pie">Apple Cinnamon Pie</option>
+                </select>
+                <small class="field-error" id="er_product">Please select a product</small>
+            </div>
+
+            <!-- Quantity + City -->
+            <div class="field-row">
+                <div class="field">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                    <small class="field-error" id="er_quantity">Quantity must be 1 or more</small>
+                </div>
+                <div class="field">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Karachi">
+                    <small class="field-error" id="er_city">Please enter your city</small>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="field">
+                <label for="address">Delivery Address</label>
+                <textarea id="address" placeholder="House #, Street, Area..."></textarea>
+                <small class="field-error" id="er_address">Address must be at least 10 characters</small>
+            </div>
+
+            <!-- Notes -->
+            <div class="field">
+                <label for="notes">Special Notes (optional)</label>
+                <textarea id="notes" placeholder="Any special instructions..."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="order-submit">
+                <i class="fas fa-check-circle"></i>
+                Confirm Order
+            </button>
+        </form>
+
+        <!-- SUCCESS -->
+        <div class="success-msg" id="successMsg">
+            <i class="fas fa-circle-check"></i>
+            <h3>Shukriya!</h3>
+            <p>Aapka order mil gaya. Hum jald contact karenge.</p>
+        </div>
+    </div>
+
+   <!-- script -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            
+            // ORDER FORM VALIDATION
+          
+            $("#reg_form").submit(function (e) {
+                e.preventDefault();
+
+                var isvalid = true;
+
+                // Regex patterns
+                var namepattern  = /^[a-zA-Z ]+$/;
+                var emailpattern = /^[a-zA-Z0-9.%#*]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                var phonepattern = /^[0-9+\-() ]{10,15}$/;
+
+                // Values
+                var name     = $("#fullName").val().trim();
+                var phone    = $("#phone").val().trim();
+                var email    = $("#email").val().trim();
+                var product  = $("#product").val();
+                var qty      = $("#quantity").val().trim();
+                var city     = $("#city").val().trim();
+                var address  = $("#address").val().trim();
+
+                // NAME
+                if (name.match(namepattern) && name.length >= 3) {
+                    $("#er_name").hide();
+                    $("#fullName").removeClass('error');
+                } else {
+                    $("#er_name").show();
+                    $("#fullName").addClass('error');
+                    isvalid = false;
+                }
+
+                // PHONE
+                if (phone.match(phonepattern)) {
+                    $("#er_phone").hide();
+                    $("#phone").removeClass('error');
+                } else {
+                    $("#er_phone").show();
+                    $("#phone").addClass('error');
+                    isvalid = false;
+                }
+
+                // EMAIL
+                if (email.match(emailpattern)) {
+                    $("#er_email").hide();
+                    $("#email").removeClass('error');
+                } else {
+                    $("#er_email").show();
+                    $("#email").addClass('error');
+                    isvalid = false;
+                }
+
+                // PRODUCT
+                if (product !== "") {
+                    $("#er_product").hide();
+                    $("#product").removeClass('error');
+                } else {
+                    $("#er_product").show();
+                    $("#product").addClass('error');
+                    isvalid = false;
+                }
+
+                // QUANTITY
+                if (qty !== "" && Number(qty) >= 1) {
+                    $("#er_quantity").hide();
+                    $("#quantity").removeClass('error');
+                } else {
+                    $("#er_quantity").show();
+                    $("#quantity").addClass('error');
+                    isvalid = false;
+                }
+
+                // CITY
+                if (city.length >= 2) {
+                    $("#er_city").hide();
+                    $("#city").removeClass('error');
+                } else {
+                    $("#er_city").show();
+                    $("#city").addClass('error');
+                    isvalid = false;
+                }
+
+                // ADDRESS
+                if (address.length >= 10) {
+                    $("#er_address").hide();
+                    $("#address").removeClass('error');
+                } else {
+                    $("#er_address").show();
+                    $("#address").addClass('error');
+                    isvalid = false;
+                }
+
+                // ============================================
+                // FORM VALID → SHOW SUCCESS
+                // ============================================
+                if (isvalid) {
+                    // Hide form + heading
+                    $("#reg_form").hide();
+                    $(".order-card h2").hide();
+
+                    // Show success
+                    $("#successMsg").addClass('show');
+
+                    // Reset
+                    $("#reg_form")[0].reset();
+                }
+            });
+
+           
+            $("#fullName, #phone, #email, #product, #quantity, #city, #address").on('input change', function () {
+                $(this).removeClass('error');
+                $(this).siblings('.field-error').hide();
+            });
+
+        });
+    </script>
+
+</body>
+</html>

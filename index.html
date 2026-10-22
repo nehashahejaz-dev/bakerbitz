@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakerz Bite · Products</title>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============ TOP NAV ============ -->
+    <header class="top-nav">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="logo-icon"><i class="fas fa-cake-candles"></i></div>
+                    <div class="logo-text"><h2>Bakerz Bite</h2></div>
+                </div>
+                <div class="guest">
+                    <span class="online"></span>
+                    Visitors: <strong id="visitor-count">1</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ MAIN MENU ============ -->
+    <nav class="navbar navbar-expand-lg main-menu sticky-top">
+        <div class="container">
+            <button class="navbar-toggler border-0 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto gap-lg-4 gap-2 py-3 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#merch">Merchandise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sales">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faqs">FAQ</a></li>
+                    <li class="nav-item">
+    <a class="nav-link cart-link" href="cart.html">
+        <i class="fas fa-shopping-cart"></i> Cart
+        <span class="cart-count" id="cartCount">0</span>
+    </a>
+</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <img src="images/bg.jpeg" alt="Bakery">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-content-inner">
+                    <h1 class="hero-title">Welcome to <span class="ba-hero"> <i>Bakerz Bite</i></span></h1>
+                    <h6 class="hero-sub">Specializing in baked goods, passionately made from the finest ingredients</h6>
+                    <p class="hero-para">We offer more than 300 different kinds of baked goods, including artisan pastries, gourmet cakes and desserts, and handcrafted beverages. We use only real butter, cream and unbleached flour because we treat our customers as family.</p>
+                    <a href="#products" class="btn-gold">
+                        <i class="fas fa-cake-candles"></i>
+                        Explore Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- ============ CATEGORY SHOWCASE ============ -->
+    <section class="category-showcase" id="categories">
+        <div class="container">
+            <h2 class="cat-title">Browse by Category</h2>
+            <p class="cat-subtitle">Click any category to see the items</p>
+
+            <div class="cat-grid">
+
+                <div class="cat-card" data-cat="cakes" tabindex="0" role="button" aria-label="View cakes">
+                    <img src="images/cake2.jpeg" alt="Cakes" class="cat-bg">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-icon"><i class="fas fa-birthday-cake"></i></div>
+                    <div class="cat-body">
+                        <h3>Cakes</h3>
+                        <p class="cat-desc">Rich, moist & beautifully layered</p>
+                        <span class="cat-link">View items <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-cat="pastries" tabindex="0" role="button" aria-label="View pastries">
+                    <img src="images/p1.jpeg" alt="Pastries" class="cat-bg">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-icon"><i class="fas fa-bread-slice"></i></div>
+                    <div class="cat-body">
+                        <h3>Pastries</h3>
+                        <p class="cat-desc">Flaky, buttery & baked fresh daily</p>
+                        <span class="cat-link">View items <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-cat="cookies" tabindex="0" role="button" aria-label="View cookies">
+                    <img src="images/c1.jpeg" alt="Cookies" class="cat-bg">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-icon"><i class="fas fa-cookie-bite"></i></div>
+                    <div class="cat-body">
+                        <h3>Cookies</h3>
+                        <p class="cat-desc">Crispy edges, chewy centers</p>
+                        <span class="cat-link">View items <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="cat-card" data-cat="pies" tabindex="0" role="button" aria-label="View pies">
+                    <img src="images/pi1.jpeg" alt="Pies" class="cat-bg">
+                    <div class="cat-overlay"></div>
+                    <div class="cat-icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="cat-body">
+                        <h3>Pies</h3>
+                        <p class="cat-desc">Homestyle fillings, golden crusts</p>
+                        <span class="cat-link">View items <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRODUCTS ============ -->
+    <section class="container pt-5 mt-5" id="products">
+        <h1 class="section-title">Our Products</h1>
+        <p class="section-sub">Choose a category & click any item for full details</p>
+
+        <div class="product-tabs">
+            <button class="product-tab active" data-tab="all"><i class="fas fa-utensils"></i> All Products</button>
+            <button class="product-tab" data-tab="cakes"><i class="fas fa-birthday-cake"></i> Cakes</button>
+            <button class="product-tab" data-tab="pastries"><i class="fas fa-bread-slice"></i> Pastries</button>
+            <button class="product-tab" data-tab="cookies"><i class="fas fa-cookie-bite"></i> Cookies</button>
+            <button class="product-tab" data-tab="pies"><i class="fas fa-chart-pie"></i> Pies</button>
+        </div>
+
+        <div id="filterWrapper">
+            <h3 class="filter-title">Filter by Type:</h3>
+            <div class="filter-row" id="filterRow"></div>
+        </div>
+
+        <div class="tab-panel active" id="tab-all">
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="chocolate" data-cat="cakes">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-chocolate">
+                        <img src="images/cake2.jpeg" class="card-img-top" alt="Chocolate Truffle">
+                        <div class="card-body">
+                            <span class="product-tag">Bestseller</span>
+                            <h5 class="card-title">Chocolate Truffle</h5>
+                            <p class="card-text">Rich Belgian chocolate with silky ganache frosting.</p>
+                            <div class="product-price">Rs. 2,500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="specialty" data-cat="cakes">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-redvelvet">
+                        <img src="images/c3.png" class="card-img-top" alt="Red Velvet">
+                        <div class="card-body">
+                            <span class="product-tag">Popular</span>
+                            <h5 class="card-title">Red Velvet</h5>
+                            <p class="card-text">Classic red velvet with cream cheese frosting.</p>
+                            <div class="product-price">Rs. 2,800</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="vanilla" data-cat="cakes">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-vanilla">
+                        <img src="images/cake4.jpeg" class="card-img-top" alt="Vanilla Bean">
+                        <div class="card-body">
+                            <span class="product-tag">Classic</span>
+                            <h5 class="card-title">Vanilla Bean</h5>
+                            <p class="card-text">Madagascar vanilla with buttercream layers.</p>
+                            <div class="product-price">Rs. 2,200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="chocolate" data-cat="cakes" id="cakes">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-blackforest">
+                        <img src="images/cake5.jpeg" class="card-img-top" alt="Black Forest">
+                        <div class="card-body">
+                            <span class="product-tag">Premium</span>
+                            <h5 class="card-title">Black Forest</h5>
+                            <p class="card-text">Cherries, cream & chocolate shavings.</p>
+                            <div class="product-price">Rs. 3,000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="french" data-cat="pastries" id="pastries">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-croissant">
+                        <img src="images/p1.jpeg" class="card-img-top" alt="Croissant">
+                        <div class="card-body">
+                            <span class="product-tag">Fresh Daily</span>
+                            <h5 class="card-title">Butter Croissant</h5>
+                            <p class="card-text">Flaky, buttery, golden French classic.</p>
+                            <div class="product-price">Rs. 350</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="danish" data-cat="pastries">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-danish">
+                        <img src="images/p2.jpeg" class="card-img-top" alt="Cherry Danish">
+                        <div class="card-body">
+                            <span class="product-tag">Sweet</span>
+                            <h5 class="card-title">Cherry Danish</h5>
+                            <p class="card-text">Sweet pastry with cherry filling & glaze.</p>
+                            <div class="product-price">Rs. 400</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="french" data-cat="pastries">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-eclair">
+                        <img src="images/p3.jpeg" class="card-img-top" alt="Chocolate Éclair">
+                        <div class="card-body">
+                            <span class="product-tag">Cream Filled</span>
+                            <h5 class="card-title">Chocolate Éclair</h5>
+                            <p class="card-text">Choux pastry filled with vanilla cream.</p>
+                            <div class="product-price">Rs. 450</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="danish" data-cat="pastries">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-muffin">
+                        <img src="images/p4.jpeg" class="card-img-top" alt="Blueberry Muffin">
+                        <div class="card-body">
+                            <span class="product-tag">Soft</span>
+                            <h5 class="card-title">Blueberry Muffin</h5>
+                            <p class="card-text">Fresh blueberries baked to perfection.</p>
+                            <div class="product-price">Rs. 320</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="classic" data-cat="cookies">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-chocchip">
+                        <img src="images/c1.jpeg" class="card-img-top" alt="Chocolate Chip">
+                        <div class="card-body">
+                            <span class="product-tag">Classic</span>
+                            <h5 class="card-title">Chocolate Chip</h5>
+                            <p class="card-text">Gooey chocolate chunks in every bite.</p>
+                            <div class="product-price">Rs. 200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="classic" data-cat="cookies">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-oatmeal">
+                        <img src="images/c2.jpeg" class="card-img-top" alt="Oatmeal Raisin">
+                        <div class="card-body">
+                            <span class="product-tag">Healthy</span>
+                            <h5 class="card-title">Oatmeal Raisin</h5>
+                            <p class="card-text">Chewy oats with sweet raisins.</p>
+                            <div class="product-price">Rs. 220</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="decorated" data-cat="cookies">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-peanut">
+                        <img src="images/c3.jpeg" class="card-img-top" alt="Peanut Butter">
+                        <div class="card-body">
+                            <span class="product-tag">Crunchy</span>
+                            <h5 class="card-title">Peanut Butter</h5>
+                            <p class="card-text">Rich peanut butter with a crunchy twist.</p>
+                            <div class="product-price">Rs. 250</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="decorated" data-cat="cookies">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-macadamia">
+                        <img src="images/c4.jpeg" class="card-img-top" alt="White Choc Macadamia">
+                        <div class="card-body">
+                            <span class="product-tag">Premium</span>
+                            <h5 class="card-title">White Choc Macadamia</h5>
+                            <p class="card-text">Creamy white chocolate & macadamia nuts.</p>
+                            <div class="product-price">Rs. 300</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="fruit" data-cat="pies">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-apple">
+                        <img src="images/pi1.jpeg" class="card-img-top" alt="Apple Pie">
+                        <div class="card-body">
+                            <span class="product-tag">Classic</span>
+                            <h5 class="card-title">Apple Pie</h5>
+                            <p class="card-text">Cinnamon apples in a flaky crust.</p>
+                            <div class="product-price">Rs. 900</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="seasonal" data-cat="pies">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-pumpkin">
+                        <img src="images/pi2.jpeg" class="card-img-top" alt="Pumpkin Pie">
+                        <div class="card-body">
+                            <span class="product-tag">Seasonal</span>
+                            <h5 class="card-title">Pumpkin Pie</h5>
+                            <p class="card-text">Spiced pumpkin with whipped cream.</p>
+                            <div class="product-price">Rs. 1,000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="fruit" data-cat="pies">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-lemon">
+                        <img src="images/pi3.jpeg" class="card-img-top" alt="Lemon Meringue">
+                        <div class="card-body">
+                            <span class="product-tag">Tangy</span>
+                            <h5 class="card-title">Lemon Meringue</h5>
+                            <p class="card-text">Zesty lemon topped with meringue peaks.</p>
+                            <div class="product-price">Rs. 950</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 product-item" data-type="nuts" data-cat="pies">
+                    <div class="card product-card-bs" data-bs-toggle="modal" data-bs-target="#modal-pecan">
+                        <img src="images/pi4.jpeg" class="card-img-top" alt="Pecan Pie">
+                        <div class="card-body">
+                            <span class="product-tag">Rich</span>
+                            <h5 class="card-title">Pecan Pie</h5>
+                            <p class="card-text">Sweet caramelized pecans in buttery crust.</p>
+                            <div class="product-price">Rs. 1,200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="no-results" id="no-results">No products match this filter.</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MERCHANDISE ============ -->
+    <section class="container pt-5 mt-5" id="merch">
+        <div class="merch-heading">
+            <h1>Merchandise</h1>
+            <p>Take home a piece of Bakerz Bite</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="merch-card" data-bs-toggle="modal" data-bs-target="#merch-mug">
+                    <div class="merch-img-wrap"><img src="images/b mug.jpeg" alt="Bakerz Mug"></div>
+                    <div class="merch-body">
+                        <h5>Bakerz Mug</h5>
+                        <p>Cozy ceramic mug with our signature gold logo. Perfect for your morning coffee.</p>
+                        <div class="merch-price">Rs. 1,299</div>
+                        <a href="order.html" class="merch-btn" onclick="event.stopPropagation()">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="merch-card" data-bs-toggle="modal" data-bs-target="#merch-tote">
+                    <div class="merch-img-wrap"><img src="images/b bag.jpeg" alt="Tote Bag"></div>
+                    <div class="merch-body">
+                        <h5>Tote Bag</h5>
+                        <p>Eco-friendly cotton tote bag with Bakerz Bite artwork. Great for groceries & more.</p>
+                        <div class="merch-price">Rs. 1,850</div>
+                        <a href="order.html" class="merch-btn" onclick="event.stopPropagation()">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="merch-card" data-bs-toggle="modal" data-bs-target="#merch-glass">
+                    <div class="merch-img-wrap"><img src="images/b gcap.jpeg" alt="Glass Cup"></div>
+                    <div class="merch-body">
+                        <h5>Glass Cup</h5>
+                        <p>Elegant glass tumbler with a subtle gold rim. Ideal for iced drinks & desserts.</p>
+                        <div class="merch-price">Rs. 999</div>
+                        <a href="order.html" class="merch-btn" onclick="event.stopPropagation()">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="merch-card" data-bs-toggle="modal" data-bs-target="#merch-tray">
+                    <div class="merch-img-wrap"><img src="images/b tray.jpeg" alt="Serving Tray"></div>
+                    <div class="merch-body">
+                        <h5>Serving Tray</h5>
+                        <p>Wooden serving tray engraved with Bakerz Bite logo. Perfect for pastries & tea.</p>
+                        <div class="merch-price">Rs. 2,499</div>
+                        <a href="order.html" class="merch-btn" onclick="event.stopPropagation()">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="merch-card" data-bs-toggle="modal" data-bs-target="#merch-apron">
+                    <div class="merch-img-wrap"><img src="images/b apron.jpeg" alt="Baker's Apron"></div>
+                    <div class="merch-body">
+                        <h5>Baker's Apron</h5>
+                        <p>Soft cotton apron with adjustable straps. Bake like a pro at home.</p>
+                        <div class="merch-price">Rs. 2,100</div>
+                        <a href="order.html" class="merch-btn" onclick="event.stopPropagation()">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="merch-card" data-bs-toggle="modal" data-bs-target="#merch-cap">
+                    <div class="merch-img-wrap"><img src="images/b cap.jpeg" alt="Bakerz Cap"></div>
+                    <div class="merch-body">
+                        <h5>Bakerz Cap</h5>
+                        <p>Stylish cap with embroidered logo. Great for sunny days and casual wear.</p>
+                        <div class="merch-price">Rs. 1,599</div>
+                        <a href="order.html" class="merch-btn" onclick="event.stopPropagation()">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery-section" id="gallery">
+        <h2 class="gallery-section-title">Our Gallery</h2>
+        <p class="gallery-section-sub">A glimpse of our bakery — click any image to enlarge</p>
+
+        <div class="gallery-container">
+
+            <div class="gallery-card gallery-card-large">
+                <div class="gallery-card-inner">
+                    <img src="images/fudgecake.jpeg" alt="Chocolate Truffle">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🎂 CAKES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Chocolate Truffle</div>
+                            <div class="gallery-sub-tag">— BESTSELLER —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/c3.png" alt="Red Velvet">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🎂 CAKES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Red Velvet</div>
+                            <div class="gallery-sub-tag">— POPULAR —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/cake4.jpeg" alt="Vanilla Bean">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🎂 CAKES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Vanilla Bean</div>
+                            <div class="gallery-sub-tag">— CLASSIC —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/black.jpeg" alt="Black Forest">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🎂 CAKES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Black Forest</div>
+                            <div class="gallery-sub-tag">— PREMIUM —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/buttercross.jpeg" alt="Butter Croissant">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🥐 PASTRIES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Butter Croissant</div>
+                            <div class="gallery-sub-tag">— FRESH DAILY —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card gallery-card-large">
+                <div class="gallery-card-inner">
+                    <img src="images/shortcake.jpeg" alt="Strawberry Shortcake">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🎂 CAKES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Strawberry Shortcake</div>
+                            <div class="gallery-sub-tag">— SPECIAL —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/mousse.jpeg" alt="Chocolate Mousse">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🍰 DESSERTS</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Chocolate Mousse</div>
+                            <div class="gallery-sub-tag">— TASTY —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/tart.jpeg" alt="Berry Tart">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🥐 Cakes</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Fruit Berry Tart</div>
+                            <div class="gallery-sub-tag">— FRESH —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/assorted.jpeg" alt="Cupcakes">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🧁 CUPCAKES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Assorted Cupcakes</div>
+                            <div class="gallery-sub-tag">— SWEET PACK —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/ass.jpeg" alt="Artisan Bread">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🥖 BAKERY</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Sourdough Bread</div>
+                            <div class="gallery-sub-tag">— ORGANIC —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/glaze.jpg" alt="Glazed Donut">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🍩 DONUTS</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Glazed Donuts</div>
+                            <div class="gallery-sub-tag">— HOT & FRESH —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/mcrones.jpeg" alt="Macarons">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🍪 MACARONS</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">French Macarons</div>
+                            <div class="gallery-sub-tag">— DELICATE —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card gallery-card-large">
+                <div class="gallery-card-inner">
+                    <img src="images/berry.jpeg" alt="Cheesecake">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🍰 CHEESECAKES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Blueberry Cheesecake</div>
+                            <div class="gallery-sub-tag">— CREAMY —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/chinnamon.jpeg" alt="Cinnamon Rolls">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🥐 PASTRIES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Cinnamon Rolls</div>
+                            <div class="gallery-sub-tag">— WARM —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/chipcake.jpeg" alt="Chocolate Chip Cookies">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🍪 COOKIES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Chocolate Chip Cookies</div>
+                            <div class="gallery-sub-tag">— CLASSIC —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/eclare.jpeg" alt="Éclairs">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🥐 PASTRIES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Chocolate Éclairs</div>
+                            <div class="gallery-sub-tag">— FRENCH —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/birthday.jpeg" alt="Birthday Cake">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🎂 CAKES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Birthday Cake</div>
+                            <div class="gallery-sub-tag">— CELEBRATE —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/apple.jpeg" alt="Apple Pie">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🥧 PIES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Apple Pie</div>
+                            <div class="gallery-sub-tag">— HOMESTYLE —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="gallery-card-inner">
+                    <img src="images/brown.jpeg" alt="Brownies">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🍫 BROWNIES</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Fudgy Brownies</div>
+                            <div class="gallery-sub-tag">— RICH —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card gallery-card-large">
+                <div class="gallery-card-inner">
+                    <img src="images/petizel.jpeg" alt="Pretzels">
+                    <div class="gallery-overlay">
+                        <div class="gallery-badges"><span class="gallery-tag primary">🥨 BAKERY</span></div>
+                        <div class="gallery-details">
+                            <div class="gallery-title">Soft Pretzels</div>
+                            <div class="gallery-sub-tag">— SALTY & SWEET —</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS / STEPS SECTION ============ -->
+<section class="steps-section" id="steps">
+    <div class="container">
+
+        <div class="steps-header">
+            <span class="steps-eyebrow">How It Works</span>
+            <h2>How Can We <em>Help You</em></h2>
+            <p>Getting your favourite treats from Bakerz Bite is simple — just follow these steps</p>
+        </div>
+
+        <div class="steps-grid">
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <h3 class="step-title">Choose Your Treats</h3>
+                <p class="step-desc">Browse our delicious range of cakes, pastries, cookies and pies — pick whatever makes you smile.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <h3 class="step-title">Contact Us</h3>
+                <p class="step-desc">Reach out via phone, WhatsApp, or visit our store. Our team is always happy to help you.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <h3 class="step-title">Confirm Order</h3>
+                <p class="step-desc">Tell us your items and quantity. We'll confirm your order and share pickup or delivery time.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <h3 class="step-title">Enjoy Your Treats</h3>
+                <p class="step-desc">Pick up your freshly baked goodies or get them delivered — and enjoy every single bite!</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ============ Offer SECTION ============ -->
+<main class="sales-container" id="sales">
+    <h2 class="sales-section-title">✨ Special Bakery Offers</h2>
+    <p class="sales-section-sub">Grab your favourite treats at a discount</p>
+
+    <div class="cards-grid" id="cards-container">
+
+        <!-- Card 1 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">20% OFF</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/fudgecake.jpeg" data-img="images/fudgecake.jpeg" alt="Chocolate Fudge Cake">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Cakes</span>
+                    <h3 class="sales-card-title">Chocolate Fudge Cake</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.9</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 1200</span>
+                        <span class="sales-old-price">PKR 1500</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Chocolate Fudge Cake"
+                        data-cat="Cakes"
+                        data-price="1200"
+                        data-img="images/fudgecake.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">HOT</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/buttercross.jpeg" data-img="images/buttercross.jpeg" alt="Butter Croissants">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Pastries</span>
+                    <h3 class="sales-card-title">Butter Croissants (Pack of 4)</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>5.0</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 650</span>
+                        <span class="sales-old-price">PKR 800</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Butter Croissants (Pack of 4)"
+                        data-cat="Pastries"
+                        data-price="650"
+                        data-img="images/buttercross.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">15% OFF</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/cup.3.jpg" data-img="images/cup.3.jpg" alt="Strawberry Cupcakes">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Cupcakes</span>
+                    <h3 class="sales-card-title">Strawberry Cupcakes</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.7</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 450</span>
+                        <span class="sales-old-price">PKR 530</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Strawberry Cupcakes"
+                        data-cat="Cupcakes"
+                        data-price="450"
+                        data-img="images/cup.3.jpg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">ORGANIC</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/bread.jpeg" data-img="images/bread.jpeg" alt="Artisanal Sourdough Bread">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Breads</span>
+                    <h3 class="sales-card-title">Artisanal Sourdough Bread</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.8</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 520</span>
+                        <span class="sales-old-price">PKR 600</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Artisanal Sourdough Bread"
+                        data-cat="Breads"
+                        data-price="520"
+                        data-img="images/bread.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">POPULAR</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/double.jpeg" data-img="images/double.jpeg" alt="Double Chocolate Donut">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Donuts</span>
+                    <h3 class="sales-card-title">Double Chocolate Donut</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.6</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 250</span>
+                        <span class="sales-old-price">PKR 300</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Double Chocolate Donut"
+                        data-cat="Donuts"
+                        data-price="250"
+                        data-img="images/double.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">BEST SELLER</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/cakeslice.jpeg" data-img="images/cakeslice.jpeg" alt="Red Velvet Cake Slice">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Cakes</span>
+                    <h3 class="sales-card-title">Red Velvet Cake Slice</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.9</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 400</span>
+                        <span class="sales-old-price">PKR 500</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Red Velvet Cake Slice"
+                        data-cat="Cakes"
+                        data-price="400"
+                        data-img="images/cakeslice.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">FRESH</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/bluemaffin.jpeg" data-img="images/bluemaffin.jpeg" alt="Blueberry Muffin">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Pastries</span>
+                    <h3 class="sales-card-title">Blueberry Muffin</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.7</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 320</span>
+                        <span class="sales-old-price">PKR 400</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Blueberry Muffin"
+                        data-cat="Pastries"
+                        data-price="320"
+                        data-img="images/bluemaffin.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">LIMITED</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/vanillemacrons.jpeg" data-img="images/vanillemacrons.jpeg" alt="Vanilla Macarons Pack">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Sweets</span>
+                    <h3 class="sales-card-title">Vanilla Macarons Pack</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.8</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 950</span>
+                        <span class="sales-old-price">PKR 1200</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Vanilla Macarons Pack"
+                        data-cat="Sweets"
+                        data-price="950"
+                        data-img="images/vanillemacrons.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">HOT DEALS</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/garlicbutter.jpeg" data-img="images/garlicbutter.jpeg" alt="Garlic Butter Breadsticks">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Breads</span>
+                    <h3 class="sales-card-title">Garlic Butter Breadsticks</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.5</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 380</span>
+                        <span class="sales-old-price">PKR 450</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Garlic Butter Breadsticks"
+                        data-cat="Breads"
+                        data-price="380"
+                        data-img="images/garlicbutter.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">SEASONAL</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/mangoslice.jpeg" data-img="images/mangoslice.jpeg" alt="Mango Cheesecake Slice">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Cakes</span>
+                    <h3 class="sales-card-title">Mango Cheesecake Slice</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.9</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 550</span>
+                        <span class="sales-old-price">PKR 650</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Mango Cheesecake Slice"
+                        data-cat="Cakes"
+                        data-price="550"
+                        data-img="images/mangoslice.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">20% OFF</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/chipcake.jpeg" data-img="images/chipcake.jpeg" alt="Chocolate Chip Cookies">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Cookies</span>
+                    <h3 class="sales-card-title">Chocolate Chip Cookies</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.8</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 480</span>
+                        <span class="sales-old-price">PKR 600</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Chocolate Chip Cookies"
+                        data-cat="Cookies"
+                        data-price="480"
+                        data-img="images/chipcake.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="sales-card-wrapper">
+            <div class="sales-card">
+                <div class="sales-card-img-box">
+                    <span class="sales-badge">SPECIAL</span>
+                    <div class="sales-wishlist-btn"><i class="fa-regular fa-heart"></i></div>
+                    <img src="images/applesinepie.jpeg" data-img="images/applesinepie.jpeg" alt="Apple Cinnamon Pie">
+                </div>
+                <div class="sales-card-details">
+                    <span class="sales-category">Pastries</span>
+                    <h3 class="sales-card-title">Apple Cinnamon Pie</h3>
+                    <div class="sales-rating"><i class="fa-solid fa-star"></i><span>4.7</span></div>
+                    <div class="sales-price-row">
+                        <span class="sales-current-price">PKR 750</span>
+                        <span class="sales-old-price">PKR 900</span>
+                    </div>
+                    <button class="sales-add-btn"
+                        data-name="Apple Cinnamon Pie"
+                        data-cat="Pastries"
+                        data-price="750"
+                        data-img="images/applesinepie.jpeg">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+    <!-- ============ Offer MODAL ============ -->
+    <div class="sales-modal-overlay" id="cartModal">
+        <div class="sales-cart-modal">
+            <button class="sales-close-modal" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="sales-modal-body">
+                <div class="sales-modal-img-box">
+                    <img id="modalImg" src="" alt="Product Image">
+                </div>
+                <span class="sales-modal-category" id="modalCat">Category</span>
+                <h3 class="sales-modal-title" id="modalTitle">Product Title</h3>
+                <div class="sales-modal-price-box">
+                    <span class="sales-modal-price" id="modalPrice">PKR 0</span>
+                </div>
+
+                <button class="sales-confirm-btn" id="confirmCartBtn">
+                    <i class="fa-solid fa-bag-shopping"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MAP SECTION ============ -->
+<section class="map-section" id="location">
+    <div class="container">
+        <div class="map-header">
+            <span class="map-eyebrow">
+                <span class="line"></span>
+                Visit Us
+                <span class="line"></span>
+            </span>
+            <h2>Find Us <em>Here</em></h2>
+            <p>Come visit Bakerz Bite — we'd love to see you!</p>
+        </div>
+    </div>
+
+    <!-- Full Width Map -->
+    <div class="map-wrapper">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.8654321!2d67.0333333!3d24.9166667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDU1JzAwLjAiTiA2N8KwMDInMDAuMCJF!5e0!3m2!1sen!2s!4v1234567890"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Bakerz Bite Location">
+        </iframe>
+    </div>
+</section>
+
+    <!-- ============ FAQ SECTION ============ -->
+<section class="faq-section" id="faqs">
+    <div class="container">
+
+        <div class="faq-header">
+            <span class="faq-eyebrow">
+                <span class="line"></span>
+                FAQ
+                <span class="line"></span>
+            </span>
+            <h2>Frequently Asked <em>Questions</em></h2>
+            <p>Everything you need to know about Bakerz Bite</p>
+        </div>
+
+        <div class="faq-grid">
+
+            <!-- LEFT COLUMN -->
+            <div class="faq-col">
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Do you take custom cake orders?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We accept custom orders with at least 48 hours notice. Whether it's a birthday, wedding, or a special celebration — our bakers will craft the perfect cake just for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Are your products made fresh daily?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Every single item is baked fresh in-store every morning. We never sell day-old products — everything you buy is made the same day.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Do you offer vegan or gluten-free options?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we have a growing selection of vegan and gluten-free products. Please contact us or visit the store for current availability — our team will guide you to the best options.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>How far in advance should I place an order?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For regular items, same-day is fine. For custom cakes and bulk orders, we recommend 48 to 72 hours advance notice to ensure quality and availability.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="faq-col">
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Do you deliver?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes — we offer local delivery within a 10 km radius. Delivery charges vary based on location and order size. Contact us on WhatsApp to place a delivery order.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>What are your opening hours?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We're open every day from <strong>8:00 AM to 10:00 PM</strong>. Holiday hours may vary, so follow us on social media for updates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Can I cancel or change my order?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, orders can be modified or cancelled up to 24 hours before the pickup or delivery time. Just contact us and we'll take care of it.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>How can I contact you?</span>
+                        <i class="fas fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can reach us by phone at <strong>+234 9132765728</strong>, email at <strong>info@bakerzbite.com</strong>, or visit us in person at 123 Baker Street, Lekki Phase 1, Lagos.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+  <!-- ============ ✨ FEEDBACK SECTION — Simple & Warm ============ -->
+<section class="feedback-section" id="feedback">
+
+    <div class="feedback-header">
+        <span class="eyebrow">Feedback</span>
+        <h2>We'd love to hear <em>from you</em></h2>
+        <p>Your thoughts help us bake better every single day</p>
+    </div>
+
+    <div class="feedback-layout">
+
+        <!-- LEFT — Info -->
+        <div class="feedback-info">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            
+
+            <h3>Every review helps us <em>improve</em>.</h3>
+
+            <p>
+                Whether it's a five-star experience or a small suggestion — we read every single message. Tell us how we did, and what we can do better.
+            </p>
+
+            <div class="feedback-stats">
+                <div class="stat-item">
+                    <strong>4.9</strong>
+                    <span>Avg Rating</span>
+                </div>
+                <div class="stat-item">
+                    <strong>2.3K</strong>
+                    <span>Reviews</span>
+                </div>
+                <div class="stat-item">
+                    <strong>98%</strong>
+                    <span>Happy</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT — Form -->
+<div class="feedback-form-wrap">
+
+    <form id="reg_form" novalidate>
+        <h4>Rate your experience</h4>
+        <p class="form-sub">Tap a star to rate us ✨</p>
+
+        <div class="star-rating">
+            <i class="fa-solid fa-star star" data-value="1"></i>
+            <i class="fa-solid fa-star star" data-value="2"></i>
+            <i class="fa-solid fa-star star" data-value="3"></i>
+            <i class="fa-solid fa-star star" data-value="4"></i>
+            <i class="fa-solid fa-star star" data-value="5"></i>
+        </div>
+        <div class="rating-label" id="ratingText">Tap a star to rate</div>
+
+        <!-- NAME -->
+        <div class="fb-field">
+            <input type="text" id="name" placeholder="Your name" autocomplete="off">
+            <small id="er_name" class="field-error">Please enter a valid name (letters only)</small>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="fb-field">
+            <input type="email" id="email" placeholder="Email address" autocomplete="off">
+            <small id="er_email" class="field-error">Please enter a valid email address</small>
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="fb-field">
+            <textarea id="mess" placeholder="Share your thoughts..." autocomplete="off"></textarea>
+            <small id="er_mess" class="field-error">Message must be at least 10 characters</small>
+        </div>
+
+        <button type="submit" class="fb-submit">
+            Send Feedback
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </form>
+
+    <!-- Success Message -->
+    <div class="fb-success" id="fbSuccess">
+        <i class="fa-solid fa-circle-check icon"></i>
+        <h4>Thank You !</h4>
+        <p>Your feedback has been recorded successfully.</p>
+    </div>
+
+</div>
+
+    </div>
+</section>
+
+
+    <!-- ============ PRODUCT MODALS ============ -->
+
+    <div class="modal fade center-modal" id="modal-chocolate" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="panel-grid">
+                    <div class="panel-img-wrap"><img src="images/cake2.jpeg" alt="Chocolate Truffle"></div>
+                    <div class="panel-info">
+                        <h2 class="panel-title">Chocolate Fudge Cake</h2>
+                        <div class="panel-price">Rs. 2,500</div>
+                        <h6 class="panel-section-title">Description</h6>
+                        <p class="panel-desc">Rich and moist chocolate cake with fudge frosting, layered with silky ganache and topped with hand-shaved chocolate curls.</p>
+                        <h6 class="panel-section-title">Ingredients</h6>
+                        <p class="panel-ingredients">Real butter, premium cocoa, fresh eggs, unbleached flour, cream, Belgian chocolate</p>
+                        <div class="panel-buttons">
+                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="order.html" class="btn-order-now">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade center-modal" id="modal-redvelvet" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="panel-grid">
+                    <div class="panel-img-wrap"><img src="images/c3.png" alt="Red Velvet"></div>
+                    <div class="panel-info">
+                        <h2 class="panel-title">Red Velvet Cake</h2>
+                        <div class="panel-price">Rs. 2,800</div>
+                        <h6 class="panel-section-title">Description</h6>
+                        <p class="panel-desc">Classic Southern-style red velvet with a velvety crumb and rich cream cheese frosting.</p>
+                        <h6 class="panel-section-title">Ingredients</h6>
+                        <p class="panel-ingredients">Flour, cocoa, buttermilk, cream cheese, real butter, red coloring</p>
+                        <div class="panel-buttons">
+                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="order.html" class="btn-order-now">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade center-modal" id="modal-vanilla" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="panel-grid">
+                    <div class="panel-img-wrap"><img src="images/cake4.jpeg" alt="Vanilla Bean"></div>
+                    <div class="panel-info">
+                        <h2 class="panel-title">Vanilla Bean Cake</h2>
+                        <div class="panel-price">Rs. 2,200</div>
+                        <h6 class="panel-section-title">Description</h6>
+                        <p class="panel-desc">Soft vanilla sponge made with real Madagascar vanilla beans and layered with silky buttercream.</p>
+                        <h6 class="panel-section-title">Ingredients</h6>
+                        <p class="panel-ingredients">Flour, real butter, fresh eggs, Madagascar vanilla bean, cream</p>
+                        <div class="panel-buttons">
+                            <button class="btn-add-cart">Add to Cart</button>
+                            <a href="order.html" class="btn-order-now">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade center-modal" id="modal-blackforest" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="panel-grid">
+                    <div class="panel-img-wrap"><img src="images/cake5.jpeg" alt="Black Forest"></div>
+                    <div class="panel-info">
+                        <h2 class="panel-title">Black Forest Cake</h2>
+                        <div class="panel-price">Rs. 3,000</div>
+                        <h6 class="panel-section-title">Description</h6>
+                        <p class="panel-desc">Traditional German Black Forest with chocolate sponge, fresh cherries, whipped cream, and dark chocolate shavings.</p>
+                        <h6 class="panel-section-title">Ingredients</h6>
+                        <p class="panel-ingredients">Chocolate sponge, fresh cherries, whipped cream, dark chocolate, real butter</p>
+                        <div class="panel-buttons">
+                            <button class="btn-add-cart">Add to Cart</button>
+                           <a href="order.html" class="btn-order-now">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============ PASTRIES MODALS ============ -->
+
+<!-- Croissant -->
+<div class="modal fade center-modal" id="modal-croissant" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/p1.jpeg" alt="Butter Croissant"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Butter Croissant</h2>
+                    <div class="panel-price">Rs. 350</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Authentic French croissant made with 100% real butter. Flaky outside, soft inside — baked fresh every morning.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Flour, real butter, yeast, milk, salt</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                        <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cherry Danish -->
+<div class="modal fade center-modal" id="modal-danish" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/p2.jpeg" alt="Cherry Danish"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Cherry Danish</h2>
+                    <div class="panel-price">Rs. 400</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Flaky Danish pastry filled with sweet cherry compote and finished with a light sugar glaze.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Flour, real butter, fresh cherries, sugar, vanilla</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                       <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chocolate Éclair -->
+<div class="modal fade center-modal" id="modal-eclair" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/p3.jpeg" alt="Chocolate Éclair"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Chocolate Éclair</h2>
+                    <div class="panel-price">Rs. 450</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Classic French éclair made from choux pastry, filled with vanilla pastry cream, topped with glossy chocolate glaze.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Choux pastry, vanilla cream, chocolate glaze, real butter, eggs</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                       <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Blueberry Muffin -->
+<div class="modal fade center-modal" id="modal-muffin" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/p4.jpeg" alt="Blueberry Muffin"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Blueberry Muffin</h2>
+                    <div class="panel-price">Rs. 320</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Soft, tender muffin packed with juicy blueberries and a hint of lemon zest. Perfect with tea or coffee.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Flour, fresh blueberries, real butter, sugar, lemon zest</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                    <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ COOKIES MODALS ============ -->
+
+<!-- Chocolate Chip Cookie -->
+<div class="modal fade center-modal" id="modal-chocchip" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/c1.jpeg" alt="Chocolate Chip"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Chocolate Chip Cookie</h2>
+                    <div class="panel-price">Rs. 200</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Golden-brown cookie loaded with rich chocolate chips. Crispy edges, chewy center — the way a cookie should be.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Flour, real butter, chocolate chips, brown sugar, vanilla</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                      <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Oatmeal Raisin -->
+<div class="modal fade center-modal" id="modal-oatmeal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/c2.jpeg" alt="Oatmeal Raisin"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Oatmeal Raisin Cookie</h2>
+                    <div class="panel-price">Rs. 220</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Wholesome oatmeal cookie with plump raisins and a touch of cinnamon. Chewy, hearty, and satisfying.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Rolled oats, raisins, flour, real butter, cinnamon</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                        <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Peanut Butter Cookie -->
+<div class="modal fade center-modal" id="modal-peanut" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/c3.jpeg" alt="Peanut Butter"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Peanut Butter Cookie</h2>
+                    <div class="panel-price">Rs. 250</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Rich, nutty, and perfectly sweet — made with creamy peanut butter and topped with a crunchy peanut crumble.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Peanut butter, flour, sugar, real butter, eggs</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                        <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- White Choc Macadamia -->
+<div class="modal fade center-modal" id="modal-macadamia" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/c4.jpeg" alt="White Choc Macadamia"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">White Choc Macadamia Cookie</h2>
+                    <div class="panel-price">Rs. 300</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Buttery cookie with creamy white chocolate chunks and crunchy macadamia nuts. A luxurious treat in every bite.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Flour, white chocolate, macadamia nuts, real butter, brown sugar</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                      <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============ PIES MODALS ============ -->
+
+<!-- Apple Pie -->
+<div class="modal fade center-modal" id="modal-apple" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/pi1.jpeg" alt="Apple Pie"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Apple Pie</h2>
+                    <div class="panel-price">Rs. 900</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Homestyle apple pie with cinnamon-spiced apples and a golden, flaky double crust.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Fresh apples, flour, real butter, cinnamon, brown sugar</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                        <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pumpkin Pie -->
+<div class="modal fade center-modal" id="modal-pumpkin" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/pi2.jpeg" alt="Pumpkin Pie"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Pumpkin Pie</h2>
+                    <div class="panel-price">Rs. 1,000</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Creamy spiced pumpkin filling in a buttery crust — a seasonal favourite topped with fresh whipped cream.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Pumpkin, flour, real butter, cinnamon, nutmeg, cream</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                       <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Lemon Meringue -->
+<div class="modal fade center-modal" id="modal-lemon" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/pi3.jpeg" alt="Lemon Meringue"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Lemon Meringue Pie</h2>
+                    <div class="panel-price">Rs. 950</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Zesty lemon curd topped with fluffy, torched meringue peaks on a crisp pastry shell.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Fresh lemon, eggs, sugar, flour, real butter</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                     <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pecan Pie -->
+<div class="modal fade center-modal" id="modal-pecan" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button class="btn-panel-close" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+            <div class="panel-grid">
+                <div class="panel-img-wrap"><img src="images/pi4.jpeg" alt="Pecan Pie"></div>
+                <div class="panel-info">
+                    <h2 class="panel-title">Pecan Pie</h2>
+                    <div class="panel-price">Rs. 1,200</div>
+                    <h6 class="panel-section-title">Description</h6>
+                    <p class="panel-desc">Rich, caramelized pecan filling on a buttery crust — a Southern classic with deep, sweet flavour.</p>
+                    <h6 class="panel-section-title">Ingredients</h6>
+                    <p class="panel-ingredients">Pecans, flour, real butter, brown sugar, vanilla, eggs</p>
+                    <div class="panel-buttons">
+                        <button class="btn-add-cart">Add to Cart</button>
+                        <a href="order.html" class="btn-order-now">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ============ GALLERY LIGHTBOX ============ -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImage" alt="Enlarged View">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-top-inner">
+                    <div class="footer-brand">
+                        <div class="logo-icon"><i class="fas fa-cake-candles"></i></div>
+                        <div>
+                            <h2>Bakerz Bite</h2>
+                            <p>Baked with love, served with joy.</p>
+                        </div>
+                    </div>
+                    <div class="footer-socials-top">
+                        <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/?hl=en" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/en/" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">About Bakerz Bite</h4>
+                        <p class="footer-text">
+                            Since our launch, Bakerz Bite has developed into a reputable bakery & café, specializing in baked goods, passionately made from the finest ingredients.
+                        </p>
+                        <p class="footer-text">
+                            <strong>Our Motto:</strong> Where smiles are served daily.
+                        </p>
+                    </div>
+
+                    <div class="footer-col" id="Contact">
+                        <h4 class="footer-title">Contact Us</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span><strong>Email:</strong><a class="email" href="mailto:bakerzbite@gmail.com">  bakerzbite@gmail.com</a> </span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span><strong>Phone:</strong> 03267843729</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span><strong>Address:</strong>Nazimabad No , 4 Near Eid gah ground</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#products">Menu</a></li>
+                            <li><a href="#merch">Merchandise</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#sales">Offers</a></li>
+                            <li><a href="#feedback">Feedback</a></li>
+                            <li><a href="#Contact">Contact</a></li>
+                            <li><a href="site.html">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+    <h4 class="footer-title">Opening Hours</h4>
+    <ul class="footer-hours">
+        <li><span>Monday - Friday</span><strong>8:00 AM – 10:00 PM</strong></li>
+        <li><span>Saturday</span><strong>9:00 AM – 11:00 PM</strong></li>
+        <li><span>Sunday</span><strong>9:00 AM – 9:00 PM</strong></li>
+        <li><span>Holidays</span><strong>10:00 AM – 8:00 PM</strong></li>
+    </ul>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- ============ MARQUEE FOOTER ============ -->
+    <footer class="marquee-footer fixed-bottom">
+        <div class="marquee-inner">
+            <div class="marquee-track">
+                <span class="marquee-item">
+                    <i class="fas fa-clock"></i>
+                    <strong>Current Date & Time:</strong>
+                    <span id="marquee-date">Loading...</span>
+                </span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">
+                    <i class="fas fa-cake-candles"></i>
+                    Welcome to Bakerz Bite — Have a great day!
+                </span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">
+                    <i class="fas fa-star"></i>
+                    Fresh baked goods every morning
+                </span>
+                <span class="marquee-sep">◆</span>
+                <span class="marquee-item">
+                    <i class="fas fa-phone"></i>
+                    Call us:  03267843729
+                </span>
+                <span class="marquee-sep">◆</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+       // ============ PRODUCT MODAL "ADD TO CART" — CART SYSTEM ============
+document.querySelectorAll('.btn-add-cart').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        const modal = this.closest('.modal');
+        if (!modal) return;
+
+        const name = modal.querySelector('.panel-title').innerText;
+        const priceText = modal.querySelector('.panel-price').innerText;
+        const price = Number(priceText.replace(/[^0-9]/g, ''));
+        const img = modal.querySelector('.panel-img-wrap img').getAttribute('src');
+
+        addToCart({
+            name: name,
+            cat: 'Products',
+            price: price,
+            img: img
+        });
+    });
+});
+        // ============ VISITOR COUNT ============
+        (function () {
+            let count = sessionStorage.getItem("session_views");
+            if (!count) { count = 1; }
+            else { count = Number(count) + 1; }
+            sessionStorage.setItem("session_views", count);
+            const el = document.getElementById("visitor-count");
+            if (el) { el.innerText = count; }
+        })();
+
+      // ============ MARQUEE DATE ============
+function updateDate() {
+    const now = new Date();
+    const dt = now.toLocaleString();
+    const el = document.getElementById("marquee-date");
+    if (el) el.innerText = dt;
+}
+setInterval(updateDate, 1000);
+updateDate();
+
+        // ============ GALLERY LIGHTBOX ============
+        (function () {
+            const cards = document.querySelectorAll('.gallery-card');
+            const modal = document.getElementById('lightboxModal');
+            const modalImg = document.getElementById('lightboxImage');
+            const modalCaption = document.getElementById('lightboxCaption');
+            const closeBtn = document.querySelector('.lightbox-close');
+            if (!modal) return;
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const img = card.querySelector('img');
+                    const title = card.querySelector('.gallery-title').innerText;
+                    modal.classList.add('active');
+                    modalImg.src = img.src;
+                    modalCaption.innerText = title;
+                });
+            });
+
+            closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) modal.classList.remove('active');
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                }
+            });
+        })();
+
+  (function () {
+    // ============ ELEMENTS ============
+    const cartModal = document.getElementById('cartModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modalImg = document.getElementById('modalImg');
+    const modalCat = document.getElementById('modalCat');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalPrice = document.getElementById('modalPrice');
+    const confirmCartBtn = document.getElementById('confirmCartBtn');
+
+    let selectedItem = null;
+
+    // ============ OPEN MODAL ON "ADD TO CART" BUTTON ============
+    document.querySelectorAll('.sales-add-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();   // 👈 card click ko rok do
+            selectedItem = {
+                name: this.dataset.name,
+                cat: this.dataset.cat,
+                price: this.dataset.price,
+                img: this.dataset.img
+            };
+
+            modalImg.src = selectedItem.img;
+            modalCat.innerText = selectedItem.cat;
+            modalTitle.innerText = selectedItem.name;
+            modalPrice.innerText = 'PKR ' + selectedItem.price;
+
+            cartModal.classList.add('active');
+        });
+    });
+
+    // ============ OPEN MODAL ON CARD CLICK (poore card par) ============
+    document.querySelectorAll('.sales-card').forEach(function (card) {
+        card.addEventListener('click', function (e) {
+
+            // Agar click seedha "Add to Cart" button par hua hai,
+            // toh skip karo (button ka apna handler chalega)
+            if (e.target.closest('.sales-add-btn')) return;
+
+            const btn = card.querySelector('.sales-add-btn');
+            if (!btn) return;
+
+            selectedItem = {
+                name: btn.dataset.name,
+                cat: btn.dataset.cat,
+                price: btn.dataset.price,
+                img: btn.dataset.img
+            };
+
+            modalImg.src = selectedItem.img;
+            modalCat.innerText = selectedItem.cat;
+            modalTitle.innerText = selectedItem.name;
+            modalPrice.innerText = 'PKR ' + selectedItem.price;
+
+            cartModal.classList.add('active');
+        });
+    });
+
+    // ============ CLOSE MODAL ============
+    closeModalBtn.addEventListener('click', function () {
+        cartModal.classList.remove('active');
+    });
+
+    cartModal.addEventListener('click', function (e) {
+        if (e.target === cartModal) {
+            cartModal.classList.remove('active');
+        }
+    });
+
+   // ============ CONFIRM ADD TO CART — CART SYSTEM ============
+confirmCartBtn.addEventListener('click', function () {
+    if (selectedItem) {
+        addToCart({
+            name: selectedItem.name,
+            cat: selectedItem.cat,
+            price: Number(selectedItem.price),
+            img: selectedItem.img
+        });
+        cartModal.classList.remove('active');
+    }
+});
+
+    // ============ ESC KEY TO CLOSE ============
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && cartModal.classList.contains('active')) {
+            cartModal.classList.remove('active');
+        }
+    });
+})();
+        // ============ FAQ ACCORDION ============
+(function () {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+
+
+            if (isOpen) {
+                item.classList.remove('open');
+                answer.style.maxHeight = null;
+            } else {
+                item.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
+    });
+})();
+
+       // ============ FEEDBACK FORM ============
+// ============ FEEDBACK FORM (jQuery validation) ============
+$(document).ready(function () {
+
+    // Star rating (still works)
+    const $stars = $('.feedback-section .star');
+    const $ratingText = $('#ratingText');
+    let ratingValue = 0;
+
+    const labels = ["Unsatisfactory 😞", "Average 😐", "Good 🙂", "Very Good 😊", "Excellent & Royal! 👑"];
+
+    $stars.on('click', function () {
+        ratingValue = Number($(this).data('value'));
+        updateStars(ratingValue);
+        $ratingText.text(labels[ratingValue - 1]);
+    });
+
+    $stars.on('mouseover', function () {
+        const val = Number($(this).data('value'));
+        $stars.each(function () {
+            $(this).toggleClass('active', Number($(this).data('value')) <= val);
+        });
+        $ratingText.text(labels[val - 1]);
+    });
+
+    $stars.on('mouseleave', function () {
+        updateStars(ratingValue);
+        $ratingText.text(ratingValue ? labels[ratingValue - 1] : "Tap a star to rate");
+    });
+
+    function updateStars(value) {
+        $stars.each(function () {
+            $(this).toggleClass('active', Number($(this).data('value')) <= value);
+        });
+    }
+
+    // Form validation
+    $("#reg_form").submit(function (e) {
+        e.preventDefault();
+
+        var isvalid = true;
+
+        var namepattern  = /^[a-zA-Z ]+$/;
+        var emailpattern = /^[a-zA-Z0-9.%#*]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        var name  = $("#name").val().trim();
+        var email = $("#email").val().trim();
+        var msg   = $("#mess").val().trim();
+
+        // NAME
+        if (name.match(namepattern)) {
+            $("#er_name").hide();
+            $("#name").removeClass('error');
+        } else {
+            $("#er_name").show();
+            $("#name").addClass('error');
+            isvalid = false;
+        }
+
+        // EMAIL
+        if (email.match(emailpattern)) {
+            $("#er_email").hide();
+            $("#email").removeClass('error');
+        } else {
+            $("#er_email").show();
+            $("#email").addClass('error');
+            isvalid = false;
+        }
+
+        // MESSAGE
+        if (msg.length < 10) {
+            $("#er_mess").show();
+            $("#mess").addClass('error');
+            isvalid = false;
+        } else {
+            $("#er_mess").hide();
+            $("#mess").removeClass('error');
+        }
+
+        // FORM VALID
+        if (isvalid) {
+            // Hide form, show success message
+            $("#reg_form").hide();
+            $("#fbSuccess").addClass('active');
+
+            // Reset form after success
+            $("#reg_form")[0].reset();
+            ratingValue = 0;
+            updateStars(0);
+            $ratingText.text("Tap a star to rate");
+        }
+    });
+
+    // Optional: Live error removal on typing
+    $("#name, #email, #mess").on('input', function () {
+        $(this).removeClass('error');
+        $(this).siblings('.field-error').hide();
+    });
+
+});
+
+        // ============ JQUERY (Filters etc.) ============
+        $(document).ready(function () {
+
+            var filterConfig = {
+                cakes:    ['All Cakes', 'Chocolate', 'Vanilla', 'Specialty'],
+                pastries: ['All Pastries', 'French', 'Danish'],
+                cookies:  ['All Cookies', 'Classic', 'Decorated'],
+                pies:     ['All Pies', 'Fruit', 'Seasonal', 'Nuts']
+            };
+
+            var filterMap = {
+                'All Cakes': 'all', 'Chocolate': 'chocolate', 'Vanilla': 'vanilla', 'Specialty': 'specialty',
+                'All Pastries': 'all', 'French': 'french', 'Danish': 'danish',
+                'All Cookies': 'all', 'Classic': 'classic', 'Decorated': 'decorated',
+                'All Pies': 'all', 'Fruit': 'fruit', 'Seasonal': 'seasonal', 'Nuts': 'nuts'
+            };
+
+            var currentTab = 'all';
+            var currentFilter = 'all';
+
+            function renderFilters(tab) {
+                if (tab === 'all') {
+                    $('#filterWrapper').addClass('hidden');
+                    return;
+                } else {
+                    $('#filterWrapper').removeClass('hidden');
+                }
+
+                var filters = filterConfig[tab] || [];
+                var html = '';
+                filters.forEach(function (f, i) {
+                    var active = i === 0 ? ' active' : '';
+                    html += '<button class="filter-btn' + active + '" data-filter="' + filterMap[f] + '">' + f + '</button>';
+                });
+                $('#filterRow').html(html);
+            }
+
+            function applyFilter() {
+                var visible = 0;
+                $('#tab-all .product-item').each(function () {
+                    var $item = $(this);
+                    var type = $item.data('type');
+                    var cat  = $item.data('cat');
+                    var catMatch  = (currentTab === 'all') || (cat === currentTab);
+                    var typeMatch = (currentFilter === 'all') || (type === currentFilter);
+                    if (catMatch && typeMatch) {
+                        $item.removeClass('hide');
+                        visible++;
+                    } else {
+                        $item.addClass('hide');
+                    }
+                });
+                if (visible === 0) { $('#no-results').show(); }
+                else { $('#no-results').hide(); }
+            }
+
+            renderFilters('all');
+            applyFilter();
+
+            $('.product-tab').on('click', function () {
+                currentTab = $(this).data('tab');
+                currentFilter = 'all';
+                $('.product-tab').removeClass('active');
+                $(this).addClass('active');
+                renderFilters(currentTab);
+                applyFilter();
+            });
+
+            $(document).on('click', '.filter-btn', function () {
+                currentFilter = $(this).data('filter');
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+                applyFilter();
+            });
+
+            $('.cat-card').on('click', function () {
+                var cat = $(this).data('cat');
+                $('html, body').stop().animate({ scrollTop: $('#products').offset().top - 80 }, 800);
+                $('.product-tab').removeClass('active');
+                $('.product-tab[data-tab="' + cat + '"]').addClass('active');
+                currentTab = cat;
+                currentFilter = 'all';
+                renderFilters(currentTab);
+                applyFilter();
+            });
+
+            $('a[href^="#"]').on('click', function (e) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    e.preventDefault();
+                    $('html, body').stop().animate({ scrollTop: target.offset().top - 80 }, 600);
+                }
+            });
+
+        });
+      // ============================================================
+// CART COUNT — Navbar mein dikhane ke liye
+// ============================================================
+(function () {
+    let cart = JSON.parse(localStorage.getItem('bakerzCart')) || [];
+    const cartCount = document.getElementById('cartCount');
+    
+    if (cartCount) {
+        const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+        cartCount.innerText = totalQty;
+    }
+})();
+
+// ============================================================
+// ADD TO CART — Global function
+// ============================================================
+window.addToCart = function (item) {
+    let cart = JSON.parse(localStorage.getItem('bakerzCart')) || [];
+
+    // Same item pehle se hai?
+    const existing = cart.find(function (c) {
+        return c.name === item.name;
+    });
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({
+            name: item.name,
+            cat: item.cat,
+            price: Number(item.price),
+            img: item.img,
+            qty: 1
+        });
+    }
+
+    localStorage.setItem('bakerzCart', JSON.stringify(cart));
+
+    // Navbar count update
+    const cartCount = document.getElementById('cartCount');
+    if (cartCount) {
+        const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+        cartCount.innerText = totalQty;
+    }
+
+    // Toast dikhao
+    showCartToast('✅ "' + item.name + '" added to cart!');
+};
+
+// ============================================================
+// TOAST NOTIFICATION
+// ============================================================
+function showCartToast(msg) {
+    const oldToast = document.querySelector('.cart-toast');
+    if (oldToast) oldToast.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'cart-toast';
+    toast.innerHTML = '<i class="fas fa-check-circle"></i> ' + msg;
+    document.body.appendChild(toast);
+
+    setTimeout(() => toast.classList.add('show'), 10);
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 400);
+    }, 2800);
+}
+    </script>
+
+</body>
+</html>
